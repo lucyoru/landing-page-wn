@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    outline: 0;
+}
+
+body {
+    background-color: #262626;
+}
+
+.container {
+    max-width: 1400px;
+    display: block;
+    margin: 0 auto;
+    padding: 0 3%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+header .menu-icon {
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+}
+
+header .logo-bem {
+    width: 150px;
+}
+
+nav {
+    position: relative;
+}
+
+nav .menu-list {
+    list-style: none;
+}
+
+nav .menu-list .close-icon {
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    display: none;
+}
+
+nav.active .menu-list {
+    transform: translateX(0);
+}
+
+nav .menu-list li{
+    display: inline-block;
+    padding: 15px;
+    font-size: 20px;
+}
+
+nav .menu-list a {
+    color: rgb(161, 81, 236);
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+nav .menu-list a:hover {
+    color: white;
+}
+
+main {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .main-left {
+    color: white;
+    width: 50%;
+    padding: 20px;
+}
+
+main .main-left h1 {
+    font-size: 4rem;
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+
+main .main-left p {
+    font-size: 22px;
+    margin: 20px 0;
+}
+
+main .main-left h3 {
+    font-size: 30px;
+    margin: 40px 0;
+}
+
+main .main-left-btn button {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px;
+    border-radius: 15px;
+    font-weight: 500;
+    box-shadow: 0 20px 35px rgb(0, 0, 0, 10%), 0 15px 12px rgb(0, 0, 0, 8%)
+}
+
+b {
+    color: rgb(161, 81, 236);
+}
+
+main .main-left-btn button:nth-child(1) {
+    background-color: #4f4e4e;
+    color: rgb(197, 134, 255) ;
+    transition: all 0.5s;
+}
+
+main .main-left-btn button:nth-child(1):hover {
+    background-color: #343434;
+}
+
+main .main-left-btn button:nth-child(2) {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    transition: all 0.5s;
+}
+
+main .main-left-btn button:nth-child(2):hover {
+    background-color: white;
+    color: rgb(161, 81, 236);
+}
+
+main .main-right {
+    padding-right: 50px;
+}
+
+.menu-icon-btn {
+    width: 400px;
+}
+
+@media (max-width:800px) {
+    nav.menu-list .close,
+    header .menu-icon {
+        display: block;
+    }
+    
+    nav .menu-list {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.5s;
+        background-color: #343434;
+    }
+
+    nav .menu-list li {
+        font-size: 30px;
+    }
+
+    main {
+        flex-wrap: wrap;
+    }
+
+    main .main-left {
+        width: 100%;
+        text-align: center;
+        padding: 50px;
+    }
+
+    main .main-left h1 {
+        font-size: 3rem;
+    }
+
+    main .main-right {
+        width: 100%;
+        margin: 50px 10px;
+    }
+
+}
